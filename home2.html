@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .receipt {
+            width: 92%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            border: 2px solid #ccc;
+            /* height: 90%; */
+        }
+        .header {
+            background: red;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .logo {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .logo img {
+            width: 60px;
+        }
+        .details {
+            margin-top: 15px;
+        }
+        .details p {
+            margin: 8px 0;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .label {
+            font-weight: bold;
+        }
+        .footer {
+            background: red;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+            margin-top: 15px;
+            border-radius: 0 0 5px 5px;
+        }
+        .inputt{
+            background-color: red;
+            border: red;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            float: none;
+        }
+        input{
+            border: none;
+            outline: none;
+            float: right;
+            margin-right: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt">
+        <div class="logo">
+            <img src="data:image/jpeg;base64,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" alt="Zenith Bank">
+        </div>
+        <div class="header"><input class="inputt" placeholder="Input  date!!!!!!!" type="text"></div>
+        <div class="details">
+            <p><span class="label">Transfer Type:</span> <input class="input" placeholder="Domestic Transfer" type="text"></p>
+            <p><span class="label">Transaction Date:</span> <input class="input" placeholder="30 May 2023, 06:32:28" type="text"></p>
+            <p><span class="label">Debit Account:</span> <input class="input" placeholder="xxxxx7531" type="text"></p>
+            <p><span class="label">Sender Name:</span> <input class="input" placeholder="Example Example Example" type="text"></p>
+            <p><span class="label">Credit Account:</span> <input class="input" placeholder="Credit account no" type="text"></p>
+            <p><span class="label">Beneficiary Name:</span> <input class="input" placeholder="Example Example Example" type="text"></p>
+            <p><span class="label">Bank:</span> <input placeholder="bank" type="text"></p>
+            <p><span class="label">Status:</span> Completed</p>
+            <p><span class="label">Amount:</span> NGN 1,000.00</p>
+            <p><span class="label">Description:</span> <input placeholder="Completed" type="text"></p>
+        </div>
+        <div class="footer">
+            For any other assistance, kindly contact us at zenithdirect@zenithbank.com and 234-1-2787000
+        </div>
+    </div>
+</body>
+</html>

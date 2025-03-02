@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 88%;
+            margin: auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo {
+            text-align: left;
+        }
+        .title {
+            color: #003366;
+            font-size: 22px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .row label {
+            font-weight: bold;
+            color: #ff6600;
+        }
+        .row input {
+            border: none;
+            font-size: 16px;
+            width: 60%;
+            text-align: right;
+        }
+        .footer {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img style="height: 110px;" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCADqANkDASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAYHAwQFAQII/8QAQBAAAQQCAAQDAwYMBgMBAAAAAQACAwQFEQYSIUETMVEHYXEUIjJygZEVFiMkQlJVYqGiscEXM5OUsvE00dPw/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAIDBQQB/8QALBEAAgECBQIEBgMAAAAAAAAAAAECAxEEEiExQVFhEyIygRQjQnGhsZHB0f/aAAwDAQACEQMRAD8AttERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREARFzJcqyvkvkVlvhxSxxvrzEENLzsFrienwP2KudSNNJydr6FkKcqjair21Omi82vVYVhERAEREAREQBERAEREAREQBERAEREAREQBERAEREARFpZDJVcbD4052T0jjbrnkPu32Hc/++sJzjCLlJ2SJQhKclGKu2bqjuXmgfa+Q5FhZUmjY6paA6wT9Q47/AFfLf/rqNubNxVqsM9mtLFNOfyNUuaZ3MJ0HOA8t+n/4Ychexr69avk4XRSWtPMQLXy1Qd6le5vl/wB+elw4mrCpTcVJcPXbXh/f+Tuw1KpTqKTi+Vpvpyvt/Bix+QsY+duMyjuwFO0TtkjPJoLj29D9h9TIdqIPa2BrMVlXB9KQc+OvM6iIEdCD+r6jt8Dsb1C/Zx87cZlD2AqWSSWSMPRoLj29D9h9TRhsT4fknttrx2f9PkvxWFz/ADKe++nK6r+1wSJF4vVs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" alt="Access Bank Logo" width="150">
+        </div>
+        <h2 class="title">Transaction Receipt</h2>
+        <p>Generated from AccessMore <span id="generated-time"></span></p>
+        
+        <div class="row">
+            <label>Transaction Amount</label>
+            <!-- <input type="number" min="2000" placeholder="N20,000" oninput="validateInput(this)"> -->
+             <h4 style="color: rgb(13, 13, 13);">1,000</h4>
+        </div>
+        <div class="row">
+            <label>Transaction Type</label>
+            <input type="text" placeholder="INTER-BANK">
+        </div>
+        <div class="row">
+            <label>Transaction Date</label>
+            <input type="text" placeholder="2023-04-20 18:08:56">
+        </div>
+        <div class="row">
+            <label>Sender</label>
+            <input type="text" placeholder="Sender name">
+        </div>
+        <div class="row">
+            <label>Beneficiary</label>
+            <input type="text" placeholder="Reciver name.">
+        </div>
+        <div class="row">
+            <label>Beneficiary Account</label>
+            <input type="text" placeholder="1740651717">
+        </div>
+        <div class="row">
+            <label>Bank</label>
+            <input type="text" placeholder="Polaris Bank">
+        </div>
+        <div class="row">
+            <label>Remark</label>
+            <input type="text" placeholder="Busola">
+        </div>
+        <div class="row">
+            <label>Transaction Reference</label>
+            <input type="text" placeholder="NXG000014230420180849280262737708">
+        </div>
+        <div class="row">
+            <label>Transaction Status</label>
+            <input type="text" placeholder="Transfer Request Successful">
+        </div>
+        
+        <p class="footer">
+            If you have any questions, please contact our 24-hour support at 
+            <a href="tel:+23412712005">+234 1-2712005</a> or email at 
+            <a href="mailto:contactcenter@accessbankplc.com">contactcenter@accessbankplc.com</a>
+        </p>
+        <script>
+            function validateInput(input) {
+                if (input.value < 100) {
+                    input.value = 100; // Prevents entering values below 100
+                }
+            }
+            </script>
+    </div>
+</body>
+</html>
